@@ -44,24 +44,30 @@ class Basket:
     def __init__(self, title):
         self.title = title
         self.goods = []
-        self.total_amount = []
+        # self.total_amount = []
 
     def add_order(self, generator):
         if generator not in self.goods:
             self.goods.append(generator)
-            self.total_amount.append(float(generator.price))
+            # self.total_amount.append(float(generator.price))
     def add_order(self, oil):
         if oil not in self.goods:
             self.goods.append(oil)
-            self.total_amount.append(float(oil.price))
+            # self.total_amount.append(float(oil.price))
     def add_order(self, fuel):
         if fuel not in self.goods:
             self.goods.append(fuel)
-            self.total_amount.append(float(fuel.price))
+            # self.total_amount.append(float(fuel.price))
+
+    def total_amount(self):
+        sum = 0
+        for index, item in enumerate(self.goods):
+            sum += item.price
+        return sum
 
     def __str__(self):
         return f"{self.title}\n{'-' * 20}\n" + '\n'.join(map(str, self.goods)) + '\n' + f"{'-' * 20}" + '\n' + \
-               str('Total amount:') + (str(sum(self.total_amount))) + str(' uah')
+               str('Total amount:') + f"{self.total_amount()}" + str('UAH')
 
 
 if __name__ == '__main__':
