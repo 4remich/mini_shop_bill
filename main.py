@@ -8,7 +8,7 @@ if __name__ == '__main__':
     customer_2 = Customer('Petrov', 'Petro', 'petrov***@gmail.com', '+3804455555***')
     customer_3 = Customer('Sydorov', 'Sydor', 'sydorov***@gmail.com', '+380444444***')
 
-    generator_1 = Generators('Werk WPG3600', 'Petrol', '2.8 kW', '45 kg', - 32_236.02)
+    generator_1 = Generators('Werk WPG3600', 'Petrol', '2.8 kW', '45 kg', 32_236.02)
     generator_2 = Generators('FOGO F3001', 'Petrol', '2.7 kW', '39 kg', 29_500.60)
     generator_3 = Generators('Alimar ALM-B-3000M', 'Petrol', '3.0 kW', '44 kg', 37_700.30)
 

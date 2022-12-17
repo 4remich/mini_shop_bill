@@ -18,8 +18,6 @@ class Cart:
     def total_amount(self):
         sum = 0
         for index, item in enumerate(self.goods):
-            if item.price <= 0:
-                raise ValueError('The price is less than zero. Check the price of the product!')
             sum += item.price
         return sum
 
